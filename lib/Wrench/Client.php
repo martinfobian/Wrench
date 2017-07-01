@@ -284,7 +284,7 @@ class Client extends Configurable
 
         if ($this->socket) {
             if (!$payload->sendToSocket($this->socket)) {
-                throw new Exception("Unexpected exception when sending Close frame.");
+                throw new \Exception("Unexpected exception when sending Close frame.");
             }
             // The client SHOULD wait for the server to close the connection
             $this->socket->receive();
